@@ -35,7 +35,7 @@ export default function PlanList() {
   }
 
   async function handleDeleteRegister(plan) {
-    const yes = window.confirm(`Confirma a exclução do plano ${plan.title}?`);
+    const yes = window.confirm(`Confirma a exclução do plano ${plan.title}?`); // eslint-disable-line
 
     if (yes) {
       try {

@@ -4,7 +4,7 @@ import colors from '~/styles/colors';
 
 export const Container = styled.div`
   margin: 0 auto;
-  padding: 40px 120px;
+  padding: 40px 270px;
 `;
 
 export const Table = styled.table`

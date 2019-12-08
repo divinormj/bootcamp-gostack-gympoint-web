@@ -67,9 +67,10 @@ export default function PlanForm() {
         setPlan(planCreate.data);
 
         toast.info('Registro incluído com sucesso!');
+
+        handleGoList();
       }
     } catch (err) {
-      console.tron.log(err);
       toast.error(
         'Falha ao gravar o registro de plano, verifique os dados informados.'
       );

@@ -20,12 +20,10 @@ export default function StudentList() {
 
   useEffect(() => {
     async function loadStudents() {
-      console.tron.log('vai students');
       try {
         const response = await api.get('students', {
           params: { student_name: name },
         });
-        console.tron.log('foi students', response);
 
         setStudents(response.data);
         setLoading(false);
@@ -49,7 +47,7 @@ export default function StudentList() {
   }
 
   async function handleDeleteRegister(student) {
-    const yes = window.confirm(`Confirma a exclução do aluno ${student.name}?`);
+    const yes = window.confirm(`Confirma a exclução do aluno ${student.name}?`); // eslint-disable-line
 
     if (yes) {
       try {

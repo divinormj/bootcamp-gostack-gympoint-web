@@ -56,11 +56,7 @@ export default function StudentForm() {
           ...data,
         };
 
-        console.tron.log(editStudent);
-
-        const response = await api.put('students', editStudent);
-
-        console.tron.log(response.data);
+        await api.put('students', editStudent);
 
         toast.info('Registro atualizado com sucesso!');
       } else {
@@ -71,7 +67,6 @@ export default function StudentForm() {
         handleGoList();
       }
     } catch (err) {
-      console.tron.log(err);
       toast.error(
         'Não foi possível gravar o registro do aluno, verifique os dados informados.'
       );
@@ -96,11 +91,11 @@ export default function StudentForm() {
       <DataEntry>
         <DataEntryInput>
           <strong>NOME COMPLETO</strong>
-          <Input name="name" />
+          <Input name="name" placeholder="John Doe" />
         </DataEntryInput>
         <DataEntryInput>
           <strong>ENDEREÇO DE E-MAIL</strong>
-          <Input name="email" />
+          <Input name="email" placeholder="exemplo@email.com" />
         </DataEntryInput>
         <DataEntryRow>
           <DataEntryInput>

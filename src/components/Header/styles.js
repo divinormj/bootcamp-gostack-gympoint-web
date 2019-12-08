@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { darken } from 'polished';
 import { Link } from 'react-router-dom';
 
 import colors from '~/styles/colors';
@@ -40,13 +41,6 @@ export const User = styled.div`
       color: #333;
     }
 
-    a {
-      display: block; /*Linha toda*/
-      margin-top: 2px;
-      font-size: 12px;
-      color: ${colors.darkLight};
-    }
-
     button {
       display: block; /*Linha toda*/
       margin-top: 2px;
@@ -54,6 +48,10 @@ export const User = styled.div`
       color: ${colors.primary};
       border: none;
       background: #fff;
+
+      &:hover {
+        color: ${darken(0.2, colors.primary)} !important;
+      }
     }
   }
 `;

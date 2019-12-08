@@ -3,7 +3,9 @@ import styled from 'styled-components';
 import colors from '~/styles/colors';
 
 export const Wrapper = styled.div`
+  max-width: 1440px;
   height: 100%;
+  background: ${colors.light};
 `;
 
 export const Content = styled.div`

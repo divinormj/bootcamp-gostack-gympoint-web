@@ -1,9 +1,12 @@
 import styled from 'styled-components';
+import Select from 'react-select';
 
 import colors from '~/styles/colors';
 
 export const Wrapper = styled.div`
+  max-width: 1440px;
   height: 100%;
+  background: ${colors.light};
 `;
 
 export const Container = styled.div`
@@ -79,16 +82,11 @@ export const DataEntryInput = styled.div`
     color: ${colors.dark};
   }
 
-  select {
-    margin-top: 10px;
-  }
-
   input {
     margin-top: 10px;
     border: 1px solid ${colors.border};
     border-radius: 4px;
     font-size: 16px;
-    color: ${colors.darkLight};
     padding: 10px;
 
     &:read-only {
@@ -108,4 +106,21 @@ export const DataEntryRow = styled.div`
   div:nth-child(2) {
     margin: 0 10px;
   }
+`;
+
+export const DataEntrySelect = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+
+  strong {
+    font-size: 14px;
+    color: ${colors.dark};
+    padding-bottom: 10px;
+  }
+`;
+
+export const SelectPlan = styled(Select)`
+  flex: 1;
 `;
