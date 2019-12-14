@@ -43,7 +43,7 @@ export default function PlanForm() {
   }, []); // eslint-disable-line
 
   useEffect(() => {
-    setTotal(duration * price);
+    setTotal(Number(duration * price).toFixed(2));
   }, [duration, price]);
 
   function handleGoList() {
